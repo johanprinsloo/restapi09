@@ -3,9 +3,9 @@ package org.webtest09
 import org.clapper.avsl.Logger
 import unfiltered.jetty.Server
 
-object Main {
+class RestApp {
 
-  val logger = Logger(Main getClass)
+  val logger = Logger(classOf[RestApp])
 
   val plans = Seq(new RootPlan,
                   new OptimizerPlan)

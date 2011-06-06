@@ -9,7 +9,7 @@ import org.clapper.avsl.Logger
 import collection.immutable.Map
 
 class OptimizerPlan extends Plan {
-  val logger = Logger(classOf[RootPlan])
+  val logger = Logger(classOf[OptimizerPlan])
   @volatile private var store = Map.empty[String, Array[Byte]]
   def intent = {
     case req @ Path(Seg("optimizer" :: id :: Nil)) => req match {

@@ -16,4 +16,7 @@ class Project(info: ProjectInfo) extends DefaultProject(info) {
   val javaNetRepo = "Java.net Repository for Maven" at "http://download.java.net/maven/2"
   val newReleaseToolsRepository = ScalaToolsSnapshots
   val avsl = "org.clapper" %% "avsl" % "0.3.1"
+
+  //runtime
+  override def mainClass = Some("org.webtest09.RestApp")
 }
